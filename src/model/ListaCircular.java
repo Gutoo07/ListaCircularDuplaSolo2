@@ -18,10 +18,16 @@ public class ListaCircular<T> {
 			novo.setAnterior(novo);
 			novo.setProximo(novo);
 		} else {
-			No<T> buffer_ultimo = this.ultimo;
+			/*No<T> buffer_ultimo = this.ultimo;
 			No<T> buffer_proximo = this.ultimo.getProximo();
 			novo.setAnterior(buffer_ultimo);
 			buffer_ultimo.setProximo(novo);
+			novo.setProximo(buffer_proximo);
+			buffer_proximo.setAnterior(novo);
+			this.ultimo = novo;*/
+			No<T> buffer_proximo = this.ultimo.getProximo();
+			novo.setAnterior(this.ultimo);
+			this.ultimo.setProximo(novo);
 			novo.setProximo(buffer_proximo);
 			buffer_proximo.setAnterior(novo);
 			this.ultimo = novo;
