@@ -18,12 +18,11 @@ public class Metodos {
 		//lista.remove(lista.getLast());
 		//System.out.println(lista.toString());;	
 		
-		System.out.println(lista.total());
+		System.out.println("Total: "+lista.total());
 		
 		lista.remove(9);
 		System.out.println(lista.toString());;	
-		System.out.println(lista.total());
-
+		System.out.println("Total: "+lista.total());
 
 	}
 }
